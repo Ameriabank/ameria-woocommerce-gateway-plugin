@@ -237,7 +237,7 @@ add_action( 'plugins_loaded', 'custom_payment_gateway_load', 0 );
 // use [success] shortcode after [woocommerce_thankyou] on Thankyou page
 function get_thank_you() {  
     if(!isset($_GET['order'])) return false;
-    $success = new WC_Custom_Payment_Gateway_1();
+    $success = new WC_Ameria();
     return $success->thankyou_page($_GET['order']);
 }
 add_shortcode( 'success', 'get_thank_you' );
